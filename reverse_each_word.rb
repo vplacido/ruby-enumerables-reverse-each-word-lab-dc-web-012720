@@ -1,12 +1,12 @@
 def reverse_each_word(sentence)
+  newSentence = ""
   sentence.split.collect do |word|
-    
-  newSentence = sentence.split(" ")
-  newArr = []
-  newSentence.each do |item|
-    newArr << item.reverse
+    if newSentence == ""
+      newSentence += "#{word.reverse}"
+    else 
+      newSentence += " #{word.reverse}"
+    end 
   end 
-  newSentence = newArr.join(" ")
   newSentence
 end
     
